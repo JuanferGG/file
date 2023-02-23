@@ -1,0 +1,75 @@
+body {
+  background: rgb(198, 188, 188);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+}
+
+nav {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  background: rgb(135, 130, 130);
+}
+nav .bars {
+  display: none;
+}
+nav .darkMode {
+  position: absolute;
+  left: 95vw;
+}
+nav .nav {
+  display: flex;
+  gap: 1.4em;
+}
+nav .nav li {
+  width: auto;
+  height: fit-content;
+  list-style: none;
+  transition: all 0.5s;
+}
+nav .nav li:hover {
+  background: rgb(185, 179, 179);
+  padding: 0 1em 0 1em;
+  border-bottom: 1.5px solid rgb(255, 255, 255);
+  border-radius: 10px 10px 0 0;
+}
+nav .nav li a {
+  text-decoration: none;
+  height: max-content;
+  color: bisque;
+  font-size: 1.2em;
+  transition: all 0.5s;
+}
+nav .nav li a:hover {
+  color: rgb(61, 58, 58);
+  font-weight: bold;
+}
+
+@media (max-width: 750px) {
+  nav {
+    height: 3em;
+  }
+  nav .bars {
+    display: flex;
+    font-size: 1.4em;
+    margin-left: 0.8em;
+  }
+  nav .bars button {
+    background: none;
+    border: none;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  nav .darkMode {
+    left: 90vw;
+  }
+  nav .nav {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

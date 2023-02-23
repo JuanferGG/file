@@ -1,0 +1,5 @@
+
+
+function navBars(){
+    document.getElementById
+}
