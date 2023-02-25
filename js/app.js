@@ -10,6 +10,7 @@ function closeNavBars(){
 
 
 
+
 //! DarkMode
 function darkMode(){
     document.querySelector('BODY').classList.add('darkBody')
@@ -18,7 +19,14 @@ function darkMode(){
     
     //!DarkTitles-P
     document.getElementsByTagName('h2')[0].classList.add('darkH2')
+    document.getElementsByTagName('h2')[1].classList.add('darkH2')
+    document.getElementsByTagName('h2')[2].classList.add('darkH2')
+    document.getElementsByTagName('h2')[3].classList.add('darkH2')
     document.getElementsByTagName('p')[0].classList.add('darkP')
+
+    //! habilidadesDark
+    document.getElementsByClassName('habilidades')[0].classList.add('darkUl')
+    document.getElementsByClassName('habilidades')[1].classList.add('darkUl')
 }
 
 function sunMode(){
@@ -28,5 +36,20 @@ function sunMode(){
 
     //!DarkTitles-P
     document.getElementsByTagName('h2')[0].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[1].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[2].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[3].classList.remove('darkH2')
     document.getElementsByTagName('p')[0].classList.remove('darkP')
+
+    //! habilidadesDark
+    document.getElementsByClassName('habilidades')[0].classList.remove('darkUl')
+    document.getElementsByClassName('habilidades')[1].classList.remove('darkUl')
 }
+
+
+//? Experimental
+
+// const titulos = document.getElementsByTagName('h2').classList.remove('darkH2')
+// for (let index = 0; index < titulos.length; index++) {
+//     titulos[index].classList.add('darkH2')
+//     }

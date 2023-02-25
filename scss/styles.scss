@@ -33,6 +33,9 @@ body{
         background-color: rgb(71, 70, 70);
     }
 }
+html{
+    scroll-behavior: smooth;
+}
 main{
     width: 100vw;
 }
@@ -62,6 +65,7 @@ nav{
     background: $bg-nav;
     z-index: 10;// <------ tener encuenta esto
     position: sticky;
+    top: 0;
 
     .barsNav{
         display: none;
@@ -137,7 +141,7 @@ nav{
 }
 //! ///////////////////////RESPONSIVE-720px///////////////////////////////////
 
-@media (max-width: 750px ) {
+@media ( max-width: 750px ) {
     nav{
         height: 3em;
         z-index: 100;
@@ -268,7 +272,7 @@ nav {
         z-index: 10;
     }
 
-//! Perfil
+//! ////////////////////// Perfil ///////////////////////////////
 
 .perfil{
     display: flex;
@@ -304,6 +308,7 @@ nav {
         width: 25em;
         justify-content: center;
         align-items: center;
+        font-size: 1em;
 
         .darkH2{
             color: antiquewhite;
@@ -325,5 +330,64 @@ nav {
     @keyframes darkP {
         0%{color: $color-p;}
         100%{color: rgb(208, 208, 208);}
+    }
+}
+
+//! ////////////////////// HABILIDADES ///////////////////////////////
+
+
+.darkH2{
+    color: antiquewhite;
+    animation: darkH2 1s ease;
+}
+.C_habilidades{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4em;
+    height: 92vh;
+    font-size: 2.5em;
+
+    .habilities{
+        display: flex;
+        gap: 6em;
+
+        .habilidades{
+            animation: Ul 1s ease;
+        }
+        @keyframes Ul {
+            0%{ color: rgb(208, 208, 208); }
+            100%{ color: $color-p; }
+        }
+        .backend,.frontend{
+            display: flex;
+            flex-direction: column;
+            color: $color-p;
+
+            ul li{
+                list-style: none;
+            }
+        }
+    }
+}
+.darkUl{
+    color: rgb(208, 208, 208);
+    animation: darkUl 1s ease;
+}
+@keyframes darkUl {
+    0%{ color: $color-p; }
+    100%{ color: rgb(208, 208, 208);}
+}
+@media (max-width: 750px) {
+    .C_habilidades{
+
+        .habilities{
+            flex-direction: column;
+            font-size: .6em;
+            gap: 0;
+            justify-content: center;
+        }
     }
 }
