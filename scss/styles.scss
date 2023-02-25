@@ -1,24 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 $bg-color: rgb(198, 188, 188);
 $bg-nav: rgb(135, 130, 130);
 $bg-li: rgb(185, 179, 179);
+$color-h2: rgb(67, 68, 69);
+$color-p: rgb(48, 44, 44);
 
 body{
     background: $bg-color;
     margin: 0;
     padding: 0;
+    animation: bodyNormal 1s ease;
+}
+@keyframes bodyNormal {
+    0%{
+        background-color: rgb(71, 70, 70);
+    }
+    100%{
+        background-color: $bg-color;
+    }
 }
 .darkBody{
     background-color: rgb(71, 70, 70);
+    animation: darkBody 1s ease;
+
+}
+@keyframes darkBody {
+    0%{
+        background-color: $bg-color;
+    }
+    100%{
+        background-color: rgb(71, 70, 70);
+    }
 }
 main{
     width: 100vw;
+}
+h2{
+    font-size: 2em;
+    color: $color-h2;
+    margin: 0;
+    animation: normalH2 1s ease;
+}
+@keyframes normalH2 {
+    0%{color: antiquewhite;}
+    100%{color: $color-h2;}
+}
+p{
+    color: $color-p;
+    font-family: 'Poppins', sans-serif;
+    animation: normalP 1s ease;
+}
+@keyframes normalP {
+    0%{color: rgb(208, 208, 208);}
+    100%{color: $color-p;}
 }
 nav{
     display: flex;
     width: 100vw;
     align-items: center;
     background: $bg-nav;
-    z-index: 0;
+    z-index: 10;
+    position: sticky;
 
     .barsNav{
         display: none;
@@ -31,11 +74,32 @@ nav{
         position: absolute;
         left: 95vw;
         z-index: 10;
+        
+        button{
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: rgb(55, 49, 49);
+            border-radius: 50%;
+            background: rgb(223, 211, 211);
+        }
     }
     .moon{
         position: absolute;
         left: 95vw;
         z-index: -10;
+
+        button{
+            background: none;
+            border: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: antiquewhite;
+            border-radius: 50%;
+            background: rgb(97, 94, 94);
+            padding: 3px;
+        }
     }
     
     .nav{
@@ -71,6 +135,7 @@ nav{
         }
     }
 }
+//! ///////////////////////RESPONSIVE-720px///////////////////////////////////
 
 @media (max-width: 750px ) {
     nav{
@@ -78,13 +143,14 @@ nav{
 
         .barsNav{
             display: flex;
-            background-color: rgb(185, 172, 172);
+            background-color: rgba(164, 161, 159, 0.818);
             z-index: 10;
             position: absolute;
             top: 0;
             left: -100%;
             width: 80vw;
             height: 100%;
+            box-shadow: 0 0 10px rgb(90, 85, 85);
             animation: closeNav .7s ease;
 
             ul{
@@ -100,7 +166,7 @@ nav{
             
                     a{
                         text-decoration: none;
-                        color: bisque;
+                        color: rgb(250, 237, 220);
                         transition: color .5s;
 
                         &:hover{
@@ -144,14 +210,21 @@ nav{
                 border: none;
                 font-size: 1.4em;
                 cursor: pointer;
+                color: rgb(215, 211, 206);
             }
         }
         .darkMode{
-            left: 95vw;
+            left: 90vw;
+        }
+        .moon{
+            left: 90vw;
         }
         .nav{
             display: none;
         }
+    }
+    .perfil{
+        flex-direction: column;
     }
 }
 
@@ -195,3 +268,63 @@ nav {
     .moon.sunLogo{
         z-index: 10;
     }
+
+//! Perfil
+
+.perfil{
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4em;
+    height: 92vh;
+
+    img{
+        width: 350px;
+        height: 300px;
+        animation: animateImg 9s infinite ease;
+        box-shadow: 0 0 10px grey;
+    }
+    @keyframes animateImg {
+        0%{
+            border-radius: 30% 50% 40% 50%;
+        }
+        50%{
+            border-radius: 60% 30% 30% 25%;
+        }
+        75%{
+            border-radius: 40% 60% 20% 40%;
+        }
+        100%{
+            border-radius: 30% 50% 40% 50%;
+        }
+    }
+    .perfilInfo{
+        display: flex;
+        flex-direction: column;
+        width: 25em;
+        justify-content: center;
+        align-items: center;
+
+        .darkH2{
+            color: antiquewhite;
+            animation: darkH2 1s ease;
+        }
+        @keyframes darkH2 {
+            0%{color: $color-h2;}
+            100%{color: antiquewhite;}
+        }
+    }
+    h2, p{
+        text-align: center;
+        font-weight: bold;
+    }
+    .darkP{
+        color: rgb(208, 208, 208);
+        animation: darkP 1s ease;
+    }
+    @keyframes darkP {
+        0%{color: $color-p;}
+        100%{color: rgb(208, 208, 208);}
+    }
+}

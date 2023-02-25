@@ -1,23 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 body {
   background: rgb(198, 188, 188);
   margin: 0;
   padding: 0;
+  animation: bodyNormal 1s ease;
 }
 
+@keyframes bodyNormal {
+  0% {
+    background-color: rgb(71, 70, 70);
+  }
+  100% {
+    background-color: rgb(198, 188, 188);
+  }
+}
 .darkBody {
   background-color: rgb(71, 70, 70);
+  animation: darkBody 1s ease;
 }
 
+@keyframes darkBody {
+  0% {
+    background-color: rgb(198, 188, 188);
+  }
+  100% {
+    background-color: rgb(71, 70, 70);
+  }
+}
 main {
   width: 100vw;
 }
 
+h2 {
+  font-size: 2em;
+  color: rgb(67, 68, 69);
+  margin: 0;
+  animation: normalH2 1s ease;
+}
+
+@keyframes normalH2 {
+  0% {
+    color: antiquewhite;
+  }
+  100% {
+    color: rgb(67, 68, 69);
+  }
+}
+p {
+  color: rgb(48, 44, 44);
+  font-family: "Poppins", sans-serif;
+  animation: normalP 1s ease;
+}
+
+@keyframes normalP {
+  0% {
+    color: rgb(208, 208, 208);
+  }
+  100% {
+    color: rgb(48, 44, 44);
+  }
+}
 nav {
   display: flex;
   width: 100vw;
   align-items: center;
   background: rgb(135, 130, 130);
-  z-index: 0;
+  z-index: 10;
+  position: sticky;
 }
 nav .barsNav {
   display: none;
@@ -30,10 +79,29 @@ nav .darkMode {
   left: 95vw;
   z-index: 10;
 }
+nav .darkMode button {
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: rgb(55, 49, 49);
+  border-radius: 50%;
+  background: rgb(223, 211, 211);
+}
 nav .moon {
   position: absolute;
   left: 95vw;
   z-index: -10;
+}
+nav .moon button {
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: antiquewhite;
+  border-radius: 50%;
+  background: rgb(97, 94, 94);
+  padding: 3px;
 }
 nav .nav {
   display: flex;
@@ -69,13 +137,14 @@ nav .nav li a:hover {
   }
   nav .barsNav {
     display: flex;
-    background-color: rgb(185, 172, 172);
+    background-color: rgba(164, 161, 159, 0.818);
     z-index: 10;
     position: absolute;
     top: 0;
     left: -100%;
     width: 80vw;
     height: 100%;
+    box-shadow: 0 0 10px rgb(90, 85, 85);
     animation: closeNav 0.7s ease;
   }
   nav .barsNav ul {
@@ -91,7 +160,7 @@ nav .nav li a:hover {
   }
   nav .barsNav ul li a {
     text-decoration: none;
-    color: bisque;
+    color: rgb(250, 237, 220);
     transition: color 0.5s;
   }
   nav .barsNav ul li a:hover {
@@ -129,12 +198,19 @@ nav .nav li a:hover {
     border: none;
     font-size: 1.4em;
     cursor: pointer;
+    color: rgb(215, 211, 206);
   }
   nav .darkMode {
-    left: 95vw;
+    left: 90vw;
+  }
+  nav .moon {
+    left: 90vw;
   }
   nav .nav {
     display: none;
+  }
+  .perfil {
+    flex-direction: column;
   }
 }
 /* visible Nav */
@@ -170,6 +246,70 @@ nav .visibleNav {
 
 .moon.sunLogo {
   z-index: 10;
+}
+
+.perfil {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4em;
+  height: 92vh;
+}
+.perfil img {
+  width: 350px;
+  height: 300px;
+  animation: animateImg 9s infinite ease;
+  box-shadow: 0 0 10px grey;
+}
+@keyframes animateImg {
+  0% {
+    border-radius: 30% 50% 40% 50%;
+  }
+  50% {
+    border-radius: 60% 30% 30% 25%;
+  }
+  75% {
+    border-radius: 40% 60% 20% 40%;
+  }
+  100% {
+    border-radius: 30% 50% 40% 50%;
+  }
+}
+.perfil .perfilInfo {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  justify-content: center;
+  align-items: center;
+}
+.perfil .perfilInfo .darkH2 {
+  color: antiquewhite;
+  animation: darkH2 1s ease;
+}
+@keyframes darkH2 {
+  0% {
+    color: rgb(67, 68, 69);
+  }
+  100% {
+    color: antiquewhite;
+  }
+}
+.perfil h2, .perfil p {
+  text-align: center;
+  font-weight: bold;
+}
+.perfil .darkP {
+  color: rgb(208, 208, 208);
+  animation: darkP 1s ease;
+}
+@keyframes darkP {
+  0% {
+    color: rgb(48, 44, 44);
+  }
+  100% {
+    color: rgb(208, 208, 208);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
