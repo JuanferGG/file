@@ -17,6 +17,7 @@ nav {
   width: 100vw;
   align-items: center;
   background: rgb(135, 130, 130);
+  z-index: 0;
 }
 nav .barsNav {
   display: none;
@@ -27,17 +28,11 @@ nav .bars {
 nav .darkMode {
   position: absolute;
   left: 95vw;
-}
-nav .sunVisible {
   z-index: 10;
 }
 nav .moon {
   position: absolute;
   left: 95vw;
-  z-index: -10;
-}
-nav .moonHiden {
-  position: absolute;
   z-index: -10;
 }
 nav .nav {
@@ -136,7 +131,7 @@ nav .nav li a:hover {
     cursor: pointer;
   }
   nav .darkMode {
-    left: 90vw;
+    left: 95vw;
   }
   nav .nav {
     display: none;
@@ -168,6 +163,13 @@ nav .visibleNav {
     top: 0;
     left: -100%;
   }
+}
+.moonHiden {
+  visibility: hidden;
+}
+
+.moon.sunLogo {
+  z-index: 10;
 }
 
 /*# sourceMappingURL=styles.css.map */

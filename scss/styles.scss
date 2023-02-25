@@ -18,6 +18,7 @@ nav{
     width: 100vw;
     align-items: center;
     background: $bg-nav;
+    z-index: 0;
 
     .barsNav{
         display: none;
@@ -29,8 +30,6 @@ nav{
     .darkMode{
         position: absolute;
         left: 95vw;
-    }
-    .sunVisible{
         z-index: 10;
     }
     .moon{
@@ -38,10 +37,7 @@ nav{
         left: 95vw;
         z-index: -10;
     }
-    .moonHiden{
-        position: absolute;
-        z-index: -10;
-    }
+    
     .nav{
         display: flex;
         gap: 1.4em;
@@ -151,7 +147,7 @@ nav{
             }
         }
         .darkMode{
-            left: 90vw;
+            left: 95vw;
         }
         .nav{
             display: none;
@@ -193,5 +189,9 @@ nav {
     }
 
     
-    
-
+    .moonHiden{
+        visibility: hidden;
+    }
+    .moon.sunLogo{
+        z-index: 10;
+    }

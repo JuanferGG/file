@@ -13,6 +13,12 @@ function closeNavBars(){
 //! DarkMode
 function darkMode(){
     document.querySelector('BODY').classList.add('darkBody')
-    document.getElementById('moon').classList.add('moonHiden')
-    document.getElementById('darkMode').classList.add('sunVisible')
+    document.getElementById('darkMode').classList.add('moonHiden')
+    document.getElementById('moon').classList.add('sunLogo')
+}
+
+function sunMode(){
+    document.querySelector('BODY').classList.remove('darkBody')
+    document.getElementById('darkMode').classList.remove('moonHiden')
+    document.getElementById('moon').classList.remove('sunLogo')
 }
