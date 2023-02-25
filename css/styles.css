@@ -134,6 +134,7 @@ nav .nav li a:hover {
 @media (max-width: 750px) {
   nav {
     height: 3em;
+    z-index: 100;
   }
   nav .barsNav {
     display: flex;
@@ -143,7 +144,7 @@ nav .nav li a:hover {
     top: 0;
     left: -100%;
     width: 80vw;
-    height: 100%;
+    height: 100vh;
     box-shadow: 0 0 10px rgb(90, 85, 85);
     animation: closeNav 0.7s ease;
   }
