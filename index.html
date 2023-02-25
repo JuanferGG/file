@@ -13,7 +13,17 @@
     <main>
         <nav>
             <div class="bars">
-                <button onclick=""><i class="uil uil-bars"></i></button>
+                <button onclick="navBars()"><i class="uil uil-bars" id="bars"></i></button>
+            </div>
+            <div class="barsNav" id="barsNav">
+                <button onclick="closeNavBars()" class="close"><i class="fa-solid fa-xmark close"></i></button>
+                <ul>
+                    <li><a href="#"><i class="uil uil-user-circle user"></i></a></li>
+                    <li><a href="#"><i class="uil uil-bookmark"></i>Estudios</a></li>
+                    <li><a href="#"><i class="uil uil-receipt"></i>Habilidades</a></li>
+                    <li><a href="#"><i class="uil uil-archive-alt"></i>Proyectos</a></li>
+                    <li><a href="#"><i class="uil uil-chat-bubble-user"></i>Contacto</a></li>
+                </ul>
             </div>
             <ul class="nav">
                 <li><a href="#"><i class="uil uil-user-circle user"></i></a></li>
@@ -22,8 +32,11 @@
                 <li><a href="#"><i class="uil uil-archive-alt"></i>Proyectos</a></li>
                 <li><a href="#"><i class="uil uil-chat-bubble-user"></i>Contacto</a></li>
             </ul>
-            <div class="darkMode">
-                <button>0</button>
+            <div class="darkMode" id="darkMode">
+                <button onclick="darkMode()"><i class="fa-solid fa-moon"></i></button>
+            </div>
+            <div class="moon" id="moon">
+                <button ><i class="fa-regular fa-sun"></i></button>
             </div>
         </nav>
     </main>

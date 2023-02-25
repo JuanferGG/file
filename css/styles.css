@@ -4,6 +4,10 @@ body {
   padding: 0;
 }
 
+.darkBody {
+  background-color: rgb(71, 70, 70);
+}
+
 main {
   width: 100vw;
 }
@@ -14,12 +18,27 @@ nav {
   align-items: center;
   background: rgb(135, 130, 130);
 }
+nav .barsNav {
+  display: none;
+}
 nav .bars {
   display: none;
 }
 nav .darkMode {
   position: absolute;
   left: 95vw;
+}
+nav .sunVisible {
+  z-index: 10;
+}
+nav .moon {
+  position: absolute;
+  left: 95vw;
+  z-index: -10;
+}
+nav .moonHiden {
+  position: absolute;
+  z-index: -10;
 }
 nav .nav {
   display: flex;
@@ -53,6 +72,58 @@ nav .nav li a:hover {
   nav {
     height: 3em;
   }
+  nav .barsNav {
+    display: flex;
+    background-color: rgb(185, 172, 172);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 80vw;
+    height: 100%;
+    animation: closeNav 0.7s ease;
+  }
+  nav .barsNav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  nav .barsNav ul li {
+    list-style: none;
+    font-size: 2em;
+    border-bottom: 1px solid grey;
+    width: 60vw;
+  }
+  nav .barsNav ul li a {
+    text-decoration: none;
+    color: bisque;
+    transition: color 0.5s;
+  }
+  nav .barsNav ul li a:hover {
+    color: aqua;
+  }
+  @keyframes closeNav {
+    0% {
+      top: 0;
+      left: 0;
+    }
+    100% {
+      top: 0;
+      left: -100%;
+    }
+  }
+  nav .barsNav .close {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: black;
+  }
   nav .bars {
     display: flex;
     font-size: 1.4em;
@@ -69,6 +140,33 @@ nav .nav li a:hover {
   }
   nav .nav {
     display: none;
+  }
+}
+/* visible Nav */
+nav .visibleNav {
+  animation: animationBar 0.7s ease;
+  top: 0;
+  left: 0;
+}
+@keyframes animationBar {
+  0% {
+    top: 0;
+    left: -100%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes closeNaV {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: -100%;
   }
 }
 
