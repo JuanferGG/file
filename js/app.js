@@ -22,6 +22,7 @@ function darkMode(){
     document.getElementsByTagName('h2')[1].classList.add('darkH2')
     document.getElementsByTagName('h2')[2].classList.add('darkH2')
     document.getElementsByTagName('h2')[3].classList.add('darkH2')
+    document.getElementsByTagName('h2')[4].classList.add('darkH2')
     document.getElementsByTagName('p')[0].classList.add('darkP')
 
     //! habilidadesDark
@@ -39,6 +40,7 @@ function sunMode(){
     document.getElementsByTagName('h2')[1].classList.remove('darkH2')
     document.getElementsByTagName('h2')[2].classList.remove('darkH2')
     document.getElementsByTagName('h2')[3].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[4].classList.remove('darkH2')
     document.getElementsByTagName('p')[0].classList.remove('darkP')
 
     //! habilidadesDark
