@@ -49,6 +49,18 @@ function sunMode(){
 }
 
 
+//! Contacto
+
+function getContacto(){
+    document.getElementById('getContacto').classList.add('contactoVisible')
+}
+
+function closeContacto(){
+    document.getElementById('getContacto').classList.remove('contactoVisible')
+}
+
+
+
 //? Experimental
 
 // const titulos = document.getElementsByTagName('h2').classList.remove('darkH2')

@@ -24,7 +24,7 @@
                     <li><a href="#"><i class="uil uil-bookmark"></i>Estudios</a></li>
                     <li><a href="#Habilidades"><i class="uil uil-receipt"></i>Habilidades</a></li>
                     <li><a href="#Proyectos"><i class="uil uil-archive-alt"></i>Proyectos</a></li>
-                    <li><a href="#"><i class="uil uil-chat-bubble-user"></i>Contacto</a></li>
+                    <li><a href="#contacto"><i class="uil uil-chat-bubble-user"></i>Contacto</a></li>
                 </ul>
             </div>
             <ul class="nav">
@@ -32,7 +32,7 @@
                 <li><a href="#"><i class="uil uil-bookmark"></i>Estudios</a></li>
                 <li><a href="#Habilidades"><i class="uil uil-receipt"></i>Habilidades</a></li>
                 <li><a href="#Proyectos"><i class="uil uil-archive-alt"></i>Proyectos</a></li>
-                <li><a href="#"><i class="uil uil-chat-bubble-user"></i>Contacto</a></li>
+                <li><a href="#contacto"><i class="uil uil-chat-bubble-user"></i>Contacto</a></li>
             </ul>
             <div class="darkMode" id="darkMode">
                 <button onclick="darkMode()"><i class="fa-solid fa-moon"></i></button>
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-
+        <br><br>
         <div class="containerP" id="Proyectos">
             <h2>Proyectos</h2>
             <div class="conatinerCards">
@@ -108,13 +108,44 @@
                     <p>pls 20 worlds</p>
                 </div>
                 <div class="card">
-                    <a href="./html/SAGA/index.html"><img src="" alt=""></a>
+                    <a href="./html/SAGA/index.html"><img src="./img/img-06.PNG" alt=""></a>
                     <h2>SAGA</h2>
                     <p>Proximamente</p>
                 </div>
             </div>
         </div>
+        <br><br>
+        <br><br>
+        <div class="contacto" id="contacto">
+            <div class="center">
+                <div class="starProyect">
+                    <h2>Start a proyect</h2>
+                    <p>Interested in working together? We should queue up a time to chat. I’ll buy the coffee.</p>
+                    <button onclick="getContacto()">Let's Go!</button>
+                </div>
+            </div>
 
+            <div class="infoContacto">
+                <h2>CONTACT ME!</h2>
+                <ul>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><i class="fa-brands fa-github"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                </ul>
+            </div>
+
+            <div class="getContacto" id="getContacto">
+                <label for="">
+                    <button onclick="closeContacto()" class="closeConta"><i class="fa-solid fa-xmark closeConta"></i></button>
+                    <span>Nombre</span><input type="text" placeholder="Name">
+                    <span>Email</span><input type="email" placeholder="Email">
+                    <button type="submit" class="submit">Contact Me!</button>
+                </label>
+            </div>
+
+        </div>
     </main>
 
 </body>

@@ -393,10 +393,9 @@ nav .visibleNav {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: fit-content !important;
+  height: fit-content;
   align-items: center;
   gap: 1.4em;
-  height: 92vh;
   font-size: 2.5em;
 }
 .containerP .conatinerCards {
@@ -430,6 +429,184 @@ nav .visibleNav {
 }
 .containerP .conatinerCards .card a img:hover {
   opacity: 0.6;
+}
+
+.contacto {
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  background: rgba(135, 130, 130, 0.847);
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contacto .infoContacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacto .infoContacto ul {
+  display: flex;
+  gap: 4vw;
+}
+.contacto .infoContacto ul li {
+  list-style: none;
+  font-size: 2em;
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: antiquewhite;
+  background: rgb(88, 84, 84);
+  transition: all 0.5s;
+}
+.contacto .infoContacto ul li:hover {
+  cursor: pointer;
+  background: antiquewhite;
+  color: rgb(88, 84, 84);
+  box-shadow: 0 0 10px rgb(183, 176, 167);
+}
+.contacto .getContacto {
+  width: 500px;
+  height: 700px;
+  background: rgba(84, 88, 91, 0.621);
+  box-shadow: 0 0 20px rgb(93, 88, 88);
+  position: relative;
+  z-index: 10;
+  bottom: 100px;
+  left: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  animation: closeContact 1s ease;
+}
+@keyframes closeContact {
+  0% {
+    bottom: 100px;
+    position: relative;
+    left: 0;
+  }
+  100% {
+    bottom: 100px;
+    left: -100%;
+  }
+}
+.contacto .getContacto label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: fit-content;
+  gap: 0.5em;
+  font-size: 1em;
+  font-weight: bold;
+}
+.contacto .getContacto label .closeConta {
+  position: absolute;
+  font-size: 1.3em;
+  top: 0.5em;
+  right: 0.5em;
+}
+.contacto .getContacto label span {
+  font-size: 2em;
+  color: antiquewhite;
+}
+.contacto .getContacto label button {
+  background: none;
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+}
+.contacto .getContacto label .submit {
+  background: rgb(79, 73, 73);
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.4em;
+  border-radius: 20px;
+  font-weight: bold;
+  color: antiquewhite;
+  transition: all 0.5s;
+}
+.contacto .getContacto label .submit:hover {
+  background: antiquewhite;
+  color: rgb(79, 73, 73);
+  box-shadow: 0 0 10px rgb(201, 185, 163);
+}
+.contacto .getContacto label input {
+  background: rgb(100, 95, 95);
+  border: none;
+  color: antiquewhite;
+  font-weight: bold;
+  height: 2em;
+  transition: all 0.5s;
+}
+.contacto .getContacto label input:focus {
+  box-shadow: 0 0 10px wheat;
+  border: none;
+}
+.contacto .getContacto label input::placeholder {
+  color: rgb(192, 188, 184);
+}
+.contacto .center {
+  display: flex;
+  width: 100vw;
+  height: fit-content;
+  position: relative;
+  top: -5vh;
+  justify-content: center;
+}
+.contacto .center .starProyect {
+  display: flex;
+  width: fit-content;
+  height: 10vh;
+  background: rgb(145, 140, 140);
+  align-items: center;
+  box-shadow: 0 0 15px rgb(169, 161, 161);
+  border-radius: 10px;
+  padding: 1em;
+  gap: 1em;
+  z-index: 10;
+}
+.contacto .center .starProyect p {
+  width: 300px;
+}
+.contacto .center .starProyect button {
+  background: none;
+  border: none;
+  width: fit-content;
+  height: fit-content;
+  background: rgb(217, 204, 187);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.contacto .center .starProyect button:hover {
+  color: bisque;
+  background: rgb(98, 98, 98);
+  box-shadow: 0 0 15px rgb(169, 161, 161);
+}
+
+.contacto .contactoVisible {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 100px;
+  left: 0;
+  animation: contactiVisible 1s ease;
+}
+@keyframes contactiVisible {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 100px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
