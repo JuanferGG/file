@@ -23,6 +23,14 @@ function darkMode(){
     document.getElementsByTagName('h2')[2].classList.add('darkH2')
     document.getElementsByTagName('h2')[3].classList.add('darkH2')
     document.getElementsByTagName('h2')[4].classList.add('darkH2')
+    document.getElementsByTagName('h2')[5].classList.add('darkH2')
+    document.getElementsByTagName('h2')[6].classList.add('darkH2')
+    document.getElementsByTagName('h2')[7].classList.add('darkH2')
+    document.getElementsByTagName('h2')[8].classList.add('darkH2')
+    document.getElementsByTagName('h2')[9].classList.add('darkH2')
+    document.getElementsByTagName('h2')[10].classList.add('darkH2')
+    document.getElementsByTagName('h2')[11].classList.add('darkH2')
+    document.getElementsByTagName('h2')[12].classList.add('darkH2')
     document.getElementsByTagName('p')[0].classList.add('darkP')
 
     //! habilidadesDark
@@ -41,6 +49,14 @@ function sunMode(){
     document.getElementsByTagName('h2')[2].classList.remove('darkH2')
     document.getElementsByTagName('h2')[3].classList.remove('darkH2')
     document.getElementsByTagName('h2')[4].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[5].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[6].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[7].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[8].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[9].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[10].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[11].classList.remove('darkH2')
+    document.getElementsByTagName('h2')[12].classList.remove('darkH2')
     document.getElementsByTagName('p')[0].classList.remove('darkP')
 
     //! habilidadesDark

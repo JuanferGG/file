@@ -82,10 +82,11 @@ nav{
         button{
             background: none;
             border: none;
-            font-size: 1.8em;
+            font-size: 1.9em;
             cursor: pointer;
             color: rgb(55, 49, 49);
             border-radius: 50%;
+            padding-right: 8px;
             background: rgb(223, 211, 211);
         }
     }
@@ -642,4 +643,22 @@ nav {
         100%{ bottom: 100px;}
     }
 }
-
+@media (max-width: 750px ) {
+    .contacto{
+        width: 100vw;
+        height: 50vh;
+        .getContacto{
+            left: -100%;
+        }
+        .starProyect{
+            visibility: hidden;
+        }
+        .infoContacto{
+            ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                height: fit-content;
+            }
+        }
+    }
+}
