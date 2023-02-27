@@ -115,6 +115,7 @@ nav .nav {
 }
 nav .nav li {
   width: auto;
+  height: -moz-fit-content;
   height: fit-content;
   list-style: none;
   transition: all 0.5s;
@@ -127,6 +128,7 @@ nav .nav li:hover {
 }
 nav .nav li a {
   text-decoration: none;
+  height: -moz-max-content;
   height: max-content;
   color: bisque;
   font-size: 1.2em;
@@ -374,6 +376,7 @@ nav .visibleNav {
 }
 @media (max-width: 750px) {
   .C_habilidades {
+    height: -moz-fit-content;
     height: fit-content;
   }
   .C_habilidades h2 {
@@ -394,6 +397,7 @@ nav .visibleNav {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
   gap: 1.4em;
@@ -425,7 +429,8 @@ nav .visibleNav {
   width: 280px;
   height: 10em;
   border-radius: 20px 20px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: opacity 0.5s;
 }
 .containerP .conatinerCards .card a img:hover {
@@ -454,7 +459,9 @@ nav .visibleNav {
 .contacto .infoContacto ul li {
   list-style: none;
   font-size: 2em;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
   border: 1px solid;
@@ -501,6 +508,7 @@ nav .visibleNav {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  width: -moz-fit-content;
   width: fit-content;
   gap: 0.5em;
   font-size: 1em;
@@ -518,6 +526,7 @@ nav .visibleNav {
 }
 .contacto .getContacto label button {
   background: none;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   border: none;
@@ -549,12 +558,16 @@ nav .visibleNav {
   box-shadow: 0 0 10px wheat;
   border: none;
 }
+.contacto .getContacto label input::-moz-placeholder {
+  color: rgb(192, 188, 184);
+}
 .contacto .getContacto label input::placeholder {
   color: rgb(192, 188, 184);
 }
 .contacto .center {
   display: flex;
   width: 100vw;
+  height: -moz-fit-content;
   height: fit-content;
   position: relative;
   top: -5vh;
@@ -562,6 +575,7 @@ nav .visibleNav {
 }
 .contacto .center .starProyect {
   display: flex;
+  width: -moz-fit-content;
   width: fit-content;
   height: 10vh;
   background: rgb(145, 140, 140);
@@ -578,7 +592,9 @@ nav .visibleNav {
 .contacto .center .starProyect button {
   background: none;
   border: none;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   background: rgb(217, 204, 187);
   border-radius: 5px;
@@ -625,8 +641,7 @@ nav .visibleNav {
   .contacto .infoContacto ul {
     flex-wrap: wrap;
     justify-content: center;
+    height: -moz-fit-content;
     height: fit-content;
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
