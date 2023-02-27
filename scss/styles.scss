@@ -153,11 +153,35 @@ nav{
             position: absolute;
             top: 0;
             left: -100%;
-            width: 80vw;
+            width: 70vw;
             height: 100vh;
             box-shadow: 0 0 10px rgb(90, 85, 85);
             animation: closeNav .7s ease;
+            justify-content: center;
 
+            img{
+                margin-top: 3em;
+                margin-left: 1.7em;
+                width: 300px;
+                border-radius: 50%;
+                border: 3px solid whitesmoke;
+                box-shadow: 0 0 20px rgb(71, 68, 68);
+                cursor: pointer;
+                transition: opacity 1s;
+                animation: animationGG 28s infinite;
+
+                &:hover{
+                    opacity: .8;
+                }
+            }
+            @keyframes animationGG {
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
             ul{
                 display: flex;
                 flex-direction: column;
@@ -288,6 +312,7 @@ nav {
         height: 300px;
         animation: animateImg 9s infinite ease;
         box-shadow: 0 0 10px grey;
+        border: 4px solid whitesmoke;
     }
     @keyframes animateImg {
         0%{
