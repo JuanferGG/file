@@ -157,8 +157,7 @@ nav .nav li a:hover {
   }
   nav .barsNav img {
     margin-top: 3em;
-    margin-left: 1.7em;
-    width: 15em;
+    width: 50vw;
     border-radius: 50%;
     border: 3px solid whitesmoke;
     box-shadow: 0 0 20px rgb(71, 68, 68);
